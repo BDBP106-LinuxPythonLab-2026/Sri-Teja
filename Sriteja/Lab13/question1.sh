@@ -1,0 +1,22 @@
+#/bin/bash
+
+#(i)
+sed -n '/and/p' python.txt
+
+#(ii)
+sed 's/language/lang/g' python.txt
+
+#(iii)
+sed '/is/d' python.txt
+
+#(iv)
+sed = python.txt | sed 'N;s/\n/ /'
+
+#(v)
+sed '1,2d' python.txt
+
+#(vi)
+sed -n '1~2p' python.txt
+
+#(vii)
+sed 's/Python/python/g;s/language/lang/g' python.txt
